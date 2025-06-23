@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Impact Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="impact-wrapper">
+  <div class="impact-widget">
+    <h1>Impact Calculator</h1>
+    <h3>I want to donate my:</h3>
+    <div class="tab-menu">
+      <button class="tab active" onclick="selectTab('talent')">Talent</button>
+      <button class="tab" onclick="selectTab('treasure')">Treasure</button>
+    </div>
+
+    <div class="tab-content">
+      <div id="talent" class="content active">
+        <div class="form-line inline-pair">
+          If I help a charity 
+          <select id="field" class="styled-input"></select>
+        </div>
+        <div class="form-line input-slider-group">
+          <div class="input-label">for</div>
+          <div class="input-slider-column">
+            <input type="number" min="1" max="8" value="1" id="talentHoursInput" class="styled-input number-input">
+            <input type="range" min="1" max="8" value="1" class="slider" id="myRangeTalent">
+          </div>
+          <div class="input-label">hours everyday</div>
+        </div>
+
+
+        <div class="form-line inline-pair">
+          for 
+          <select id="level" class="styled-input"></select>
+        </div>
+
+        <p id="talentImpact" class="impact-result"></p>
+      </div>
+
+      <div id="treasure" class="content">
+        <div class="form-line input-slider-group">
+          <label>If I donate</label>
+          <div class="input-slider-column">
+            <input type="number" min="1" max="10000" value="1" id="treasureAmountInput" class="styled-input number-input">
+            <input type="range" min="1" max="10000" value="1" class="slider" id="myRangeTreasure">
+          </div>
+          <label>dollars</label>
+        </div>
+        <p id="treasureImpact" class="impact-result"></p>
+      </div>
+
+    </div>
+
+    <script src="main.js"></script>
+  </div>
+</div>
+<script src="dropMenu.js"></script>
+<script src="selectMenu.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
